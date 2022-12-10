@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        #navbar{
+            height: 60px;
+            width: 100%;
+            display: flex;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            
+        }#navbar>div{
+            margin: auto;
+        }
+        #navbar>div:first-child{
+            height: 70%;
+            width: 9%;
+            cursor: pointer;
+        }#image>img{
+            width: 100%;
+            height: 100%;
+            margin: auto;
+        }
+         #navbar>div:nth-child(2){
+            height: 80%;
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }#navbar>div:nth-child(3){
+            height: 80%;
+            width: 10%;
+            
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 25px;
+        }
+        #search_video{
+            width: 93%;
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 20px;
+            margin-top: 30px;
+            margin: auto;
+            margin-top: 20px;
+            align-items: center;
+            justify-content: center;
+
+        }
+        img{
+            margin-top: 15px;
+            width: 100%;
+            height: 200px;
+        }#search_video>div:hover{
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }#search_video>div{
+            cursor: pointer;
+        }h5{
+            padding: 10px;
+            align-items: center;
+        }input{
+            height: 90%;
+            width: 80%;
+            font-size: 20px;
+            cursor: pointer;
+        }button{
+            height: 90%;
+            width: 20%;
+            cursor: pointer;
+        }h2{
+            margin-top: 30px;
+            margin-left: 60px;
+        }
+    </style>
+</head>
+<body>
+    <div id="navbar">
+        <div id="image">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/YouTube_Logo_%282013-2017%29.svg/1280px-YouTube_Logo_%282013-2017%29.svg.png" alt="">
+        </div>
+        <div id="search">
+            <input type="text" id="query">
+            <button onclick="getData()">Search</button>
+        </div>
+        <div id="login">
+            Login
+        </div>
+
+    </div>
+    <h2 id="result">
+        Trending Vedio
+    </h2>
+    
+    <div id="search_video"></div>
+    
+</body>
+</html>
+<script src="index.js"></script>

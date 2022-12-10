@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            width: 50%;
+            height: 400px;
+            margin: auto;
+            margin-top: 40px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }h2{
+            margin-top: 30px;
+            margin-left: 60px;
+        }
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        #navbar{
+            height: 60px;
+            width: 100%;
+            display: flex;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            
+        }#navbar>div{
+            margin: auto;
+        }
+        #navbar>div:first-child{
+            height: 70%;
+            width: 9%;
+            cursor: pointer;
+        }#image>img{
+            width: 100%;
+            height: 100%;
+            margin: auto;
+        }
+         #navbar>div:nth-child(2){
+            height: 80%;
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }#navbar>div:nth-child(3){
+            height: 80%;
+            width: 10%;
+            
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 25px;
+        }
+        #search_video{
+            width: 93%;
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-row: 350px;
+            gap: 20px;
+            margin-top: 30px;
+            margin: auto;
+            margin: 40px;
+
+        }input{
+            height: 90%;
+            width: 80%;
+            font-size: 20px;
+            cursor: pointer;
+        }button{
+            height: 90%;
+            width: 20%;
+            cursor: pointer;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div id="navbar">
+        <div id="image">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/YouTube_Logo_%282013-2017%29.svg/1280px-YouTube_Logo_%282013-2017%29.svg.png" alt="">
+        </div>
+        <div id="search">
+            
+        </div>
+        <div id="login">
+           
+        </div>
+
+    </div>
+
+    <h2>Play Vedio</h2>
+    <div id="container">
+
+    </div>
+    
+</body>
+</html>
+<script>
+
+    let data1 = JSON.parse(localStorage.getItem("clicked"))
+    console.log(data1)
+    let iframe=document.createElement("iframe")
+    iframe.src=`https://www.youtube.com/embed/${data1.videoId1}`;
+    iframe.width="100%";
+    iframe.height="80%"
+    iframe.allow="fullscreen"
+    
+    let h4=document.createElement("h4")
+    h4.innerText=data1.snippet1
+    document.querySelector("#container").append(iframe,h4)
+            
+       
+   
+        
+        
+        
+
+
+
+    
+    
+        
+    
+
+
+    
+    
+</script>
+<script src="index.js"></script>
